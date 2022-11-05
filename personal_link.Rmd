@@ -1,0 +1,26 @@
+---
+title: "Personal Link"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cosmo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Personal links:
+
+Here is my personal links:
+
+
+Link to github: [Github document](https://github.com/ShunXie)
+
+Link to Linkedin: [Linkedin](https://www.linkedin.com/in/shun-xie-120146248/)
+
+Link to my publication: [Paper](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12163/2628019/Comparison-of-models-performance-for-predicting-depression-under-COVID-19/10.1117/12.2628019.full?SSO=1)
+
+Link to my master thesis: [Thesis](https://docsend.com/view/vz5zrj83x2gtubaz)
+

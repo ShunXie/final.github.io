@@ -1,0 +1,194 @@
+---
+title: "Shun Xie's resume"
+author: Shun Xie
+date: "`r Sys.Date()`"
+output:
+  pagedown::html_resume:
+    # set it to true for a self-contained HTML page but it'll take longer to render
+    self_contained: false
+# uncomment this line to produce HTML and PDF in RStudio:
+#knit: pagedown::chrome_print
+---
+
+Aside
+================================================================================
+
+
+![Shun Xie](picture_resume.jpg){width=80%}
+
+
+Contact Info {#contact}
+--------------------------------------------------------------------------------
+
+- <i class="fa fa-envelope"></i> sx2337@cumc.columbia.edu
+- <i class="fa fa-github"></i> [github.com/ShunXie](https://github.com/ShunXie)
+- <i class="fa fa-phone"></i> +1 917-853-6527
+- For more information, please contact me via email.
+- Back to [homepage](https://shunxie.github.io/)
+
+
+Skills {#skills}
+--------------------------------------------------------------------------------
+- Highly skilled in R, Python, LaTeX, Matlab, SPSS, STATA
+
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+This resume was made with the R package [**pagedown**](https://github.com/rstudio/pagedown).
+
+Last updated on `r Sys.Date()`.
+
+
+
+Main
+================================================================================
+
+Shun Xie {#title}
+--------------------------------------------------------------------------------
+
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+### Imperial College London
+
+Msci. (Bachelor and Master) in Mathematics
+
+London, UK
+
+2018
+
+Undergraduate GPA: 3.7/4.0, Graduate GPA: 3.83/4.0, First-Class Honours Degree (UK)
+
+Thesis: Correlation between unemployment and earnings using Distance Correlation
+
+### Columbia University
+
+M.S. in Biostatistics
+
+New York, US
+
+2022
+
+
+
+
+Research Experience {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+### Correlation between Unemployment and Wages
+
+Master Thesis, Imperial College London
+
+London, UK
+
+Oct 2021 - Jun 2022
+
+- Applied Distance Correlation in a new field and captured additional 10% non-linear correlations.
+- Implemented spatial regression with approximate profile-likelihood estimator (APLE) to solve the problem of nonzero spatial correlation.
+- Iterated over confounders and concluded that the correlation arises from confounders under different time lag
+
+### Depression Status Predicted by COVID-19 Associated Behavior Change
+
+Group Leader, Yale University
+
+Remote
+
+Jun 2021 - Sep 2021
+
+- Increased accuracy by an average of 6% after replacing selected models (Logistic Regression, Mixed Logistic
+Regression, Random Forest, k-NN) by Linear SVM
+- Improved sensitivity by 0.6 in k-NN and LR using Under-sampling, Lower-sampling to tackle unbalanced data.
+- Identified Random Forest achieved the optimal F-score (0.787) and sensitivity (0.750) using 4-fold cross-validation
+
+### Evaluation of Supervised Classification Models for Image Recognition
+
+Academic, Imperial College London
+
+London, UK
+
+Jan 2021 - Mar 2021
+
+- Built and optimized the Multilayer Perceptron model to prevent overtraining based on the performance on CIFAR-10 dataset
+- Compared results between MLP and CNN model; Concluded that CNN model has a 20% higher accuracy at
+epoch 40 and saved 7 megabytes of data
+  
+
+
+### Comparison of Different Word Embedding Models based on IMDb Reviews Jun 2020
+
+Group Leader, Imperial College London, UK
+
+London, UK
+
+Jun 2020
+
+- Compared LSA, GloVe, and Word2vec models via theoretical analysis using intrinsic and extrinsic evaluation
+- Discovered no global difference among models after applying sentiment analysis on IMDB movie reviews
+
+Professional Experience {data-icon=suitcase}
+--------------------------------------------------------------------------------
+
+### Parttime Assistant
+
+Bank of America Merrill Lynch 
+
+Remote
+
+Dec 2020 - Feb 2021
+
+
+- Built a customized ticker match machine that was similar to the Bloomberg ticker with Python to test whether input ticker string is valid and if it shows all the values of components if valid
+
+
+### Data Analyst, Intern
+
+Caitong Security Asset Management Co. Ltd.
+
+Shanghai, China
+
+Jun 2020 - Aug 2020
+
+- Improved accuracy by imputing missing value using developed formula.
+- Analyze data extracted from Wind and generate analysis report on the feature of public equity fund
+
+
+### Data Analyst, Intern
+
+Hycon Research Co. Ltd. 
+
+Shanghai, China
+
+Jul 2019 - Sep 2019
+
+- Contributed to a market research project to optimize the design of a new towelette product and boost sales
+
+
+
+
+Teaching Experience {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+### QunYao Consulting.
+
+Teaching for algebra and differential equations for a level. 
+
+Shanghai, China
+
+Jun 2018 - Jul 2018
+
+
+Selected Publications {data-icon=file}
+--------------------------------------------------------------------------------
+
+### Comparison of Models’ Performance for Predicting Depression under COVID-19.
+
+accepted by the 2021 International Conference on Statistics, Applied Mathematics and Computing Science (CSAMCS 2021)
+
+Shanghai, China
+
+2021
+
+**Shun Xie**
+

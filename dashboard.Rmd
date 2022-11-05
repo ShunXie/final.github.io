@@ -1,0 +1,86 @@
+---
+title: "NY NOAA Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(p8105.datasets)
+library(flexdashboard)
+library(plotly)
+library(dplyr)
+library(rnoaa)
+```
+
+
+```{r,include = FALSE}
+# get the data (by the information of rnoaa):
+stations <- ghcnd_stations()
+nystationids <-  stations %>% 
+  filter(state == "NY") %>% 
+  distinct(id)
+
+
+ny_noaa_tidy = 
+  ny_noaa %>% 
+  filter(id == nystationids$id) %>% 
+  separate(date,c('year','month','day'),sep='-') %>%
+  mutate(
+    year = as.integer(year),
+    month = as.integer(month),
+    day = as.integer(day)
+  ) %>% 
+  mutate(month = month.abb[month]) %>% 
+  mutate(tmax = as.integer(tmax), tmin = as.integer(tmin))
+
+```
+
+
+
+
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+ny_noaa_tidy %>%
+  group_by(month) %>% 
+  summarize(average_tmax = mean(tmax,na.rm=TRUE)) %>% 
+  ungroup() %>% 
+  mutate(month = fct_relevel(month, month.abb)) %>% 
+  plot_ly(y=~average_tmax,x=~month,type="bar" )%>% 
+  layout(title = 'Barplot for average tmax in all month')
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+ny_noaa_tidy %>% 
+  filter(month=='Jan'|month=='Jul') %>% 
+  plot_ly(x=~tmin, y=~tmax, color = ~month, type = "scatter", mode = "markers") %>% 
+  layout(title = 'Scatter plot for tmax against tmin in January and July respectively')
+
+```
+
+### Chart C
+
+```{r}
+ ny_noaa_tidy %>% 
+  filter(month=='Jan'|month=='Jul') %>% 
+  plot_ly(y=~tmax, color = ~month, type = "box") %>% 
+  layout(title = 'Boxplot for tmax in January and July respectively')
+
+
+#use: rmarkdown::render("dashboard.Rmd",output_format = "flexdashboard::flex_dashboard")
+```
+
